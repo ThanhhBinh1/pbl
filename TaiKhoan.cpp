@@ -6,33 +6,34 @@
 #include <ctime>
 
 using namespace std;
-Kiểm tra đăng nhập, xác thực dựa trên tên đăng nhập và mật khẩu
+// Kiểm tra đăng nhập, xác thực dựa trên tên đăng nhập và mật khẩu
+// tao thử 1 tí
 
-bool TaiKhoan::DangNhap(const string& fileName, string& tenDangNhap, string& matKhau) {
-    ifstream file(fileName);
-    if (!file.is_open()) {
-        cerr << "Khong the mo file: " << fileName << endl;
-        return false;
-    }
-    string tenDangNhapFile, matKhauFile, gmailFile;
-    cout << "Nhap ten dang nhap: ";
-    cin >> tenDangNhap;
-    cout << "Nhap mat khau: ";
-    cin >> matKhau;
-    while (file >> gmailFile >> tenDangNhapFile >> matKhauFile) {
-        cout << tenDangNhap << endl;
-        cout << matKhau << endl;
-        if (tenDangNhap == tenDangNhapFile && matKhau == matKhauFile) {
-            cout << "Dang nhap thanh cong." << endl;
-            file.close();
-            return true;
-        }
-    }
-    cout << "Dang nhap that bai."
-    cout << "Ten dang nhap hoac mat khau khong dung." << endl;
-    file.close();
-    return false;
-}
+// bool TaiKhoan::DangNhap(const string& fileName, string& tenDangNhap, string& matKhau) {
+//     ifstream file(fileName);
+//     if (!file.is_open()) {
+//         cerr << "Khong the mo file: " << fileName << endl;
+//         return false;
+//     }
+//     string tenDangNhapFile, matKhauFile, gmailFile;
+//     cout << "Nhap ten dang nhap: ";
+//     cin >> tenDangNhap;
+//     cout << "Nhap mat khau: ";
+//     cin >> matKhau;
+//     while (file >> gmailFile >> tenDangNhapFile >> matKhauFile) {
+//         cout << tenDangNhap << endl;
+//         cout << matKhau << endl;
+//         if (tenDangNhap == tenDangNhapFile && matKhau == matKhauFile) {
+//             cout << "Dang nhap thanh cong." << endl;
+//             file.close();
+//             return true;
+//         }
+//     }
+//     cout << "Dang nhap that bai."
+//     cout << "Ten dang nhap hoac mat khau khong dung." << endl;
+//     file.close();
+//     return false;
+// }
 
 bool TaiKhoan::DangNhap(const string& fileName, string& tenDangNhap, string& matKhau) {
     return false;
