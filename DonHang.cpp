@@ -17,5 +17,5 @@ void DonHang::HienThiDonHang() const {
     for (const auto& mon : dsMonDaChon) {
         cout << "Mon: " << mon.getTenMon() << " - Gia: " << mon.getGia() << " VND" << endl;
     }
-    cout << "Tong tien: " << tongTien << " VND" << endl;
+    cout << "Tong tien: " << tongTien << " Do la Mi" << endl;
 }
